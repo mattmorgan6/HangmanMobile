@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HangmanMobile7.Guessing"
+             BackgroundImage="bi1.jpg">
+    <ContentPage.Content>
+
+        <StackLayout
+            Orientation="Vertical">
+
+            <!-- This grid contains everything in the top row -->
+            <Grid x:Name="topRow"
+              Grid.ColumnSpan="3"
+              Grid.RowSpan="3"
+              Margin="8, 4, 8, 0"
+              HeightRequest="96" >
+
+                <StackLayout
+                    Grid.Column="0"
+                    Grid.Row="0" 
+                    Orientation="Horizontal">
+
+                    <Label x:Name="livesLabel"
+                        Margin="0, -4, 0, 0"
+                        TextColor="#e74c3c"
+                        FontSize="23"
+                        Text="7" />
+                    
+                    <Image x:Name="heartImage"
+                           Margin="0, 3, 0, 0"
+                           HeightRequest="24"
+                           VerticalOptions="Start"/>
+
+                </StackLayout>
+
+                <!-- This grid is just the middle part where it says "hangman" -->
+                <Grid x:Name="pictur"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Start"
+                  Grid.Column="1"
+                  Grid.Row="0"
+                  Grid.ColumnSpan="1"
+                  Grid.RowSpan="1" >
+
+                    <Image x:Name="pictura"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Center"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Margin="0, -8, 0, 0"/>
+
+                    <Label Text="Hangman" 
+                       Margin="0, 0, 0, 0" 
+                       VerticalOptions="Start"
+                       TextColor="WhiteSmoke"
+                       HorizontalOptions="Center"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+
+                </Grid>
+
+
+                <Image x:Name="homeImage"
+                       Grid.Column="2"
+                       Grid.Row="0"
+                       HorizontalOptions="End"
+                       VerticalOptions="Start"
+                       HeightRequest="24"/>
+
+                <!--The button is invisible and underneath the word "home"-->
+                <Button x:Name="goHome"
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        HorizontalOptions="End"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        Opacity="0"
+                        Clicked="GoHome_Clicked"/>
+
+            </Grid>
+
+
+            
+            
+            
+           
+            
+            
+            
+            
+            
+            
+            <StackLayout>
+                <!-- This is the label where the answer is revealed -->
+                <Label x:Name="answerLabel"
+                   Text="_ _ _ _ _ _"
+                   HorizontalOptions="Center"
+                   Margin="0, 4, 0, 16"
+                   FontSize="24"/>
+
+                <!-- This is the letter entry bar -->
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    Margin="0, 16, 0, 32">
+
+                    <Entry  x:Name="LetterEntry"
+                        HorizontalOptions="Center"
+                        Placeholder="enter a letter"/>
+
+                    <Button Text="Guess"
+                        Clicked="Guessed"
+                        HorizontalOptions="Center"
+                        Margin="0, 8, 0, 0"
+                        HeightRequest="20"
+                        WidthRequest="80"
+                        BackgroundColor="#b7b7b7"
+                        BorderRadius="16"/>
+                    
+                </StackLayout>
+
+
+            </StackLayout>
+
+
+            <StackLayout
+            Margin="0, 12, 0, 12">
+
+                <Label x:Name="leylabel"
+                   Text="Used Letters: "
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" 
+                   Font="Bold, 16"/>
+
+                <!-- This is where the used letters go -->
+                <Label x:Name="garbagePile"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" 
+                   Margin="0, 0, 0, 16"
+                   FontSize="18"/>
+
+            </StackLayout>
+
+
+
+            <!-- this is the hangman graphic -->
+            <Image x:Name="mainGraphic"
+                   HorizontalOptions="Center"
+                   HeightRequest="200"
+                   Margin="0, 0, 0, 0"/>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

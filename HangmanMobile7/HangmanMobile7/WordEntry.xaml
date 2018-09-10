@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HangmanMobile7.WordEntry"
+             BackgroundImage="bi1.jpg"
+             >
+    <ContentPage.Content>
+
+        <StackLayout
+            Orientation="Vertical">
+
+            <Grid Grid.ColumnSpan="1"
+                  Grid.RowSpan="1"
+                  HeightRequest="32"
+                  Margin="0, 12, 12, 0">
+
+                <Image x:Name="homeImage2"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       HorizontalOptions="End"
+                       VerticalOptions="Start"/>
+
+                <Button x:Name="goHome"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        HorizontalOptions="End"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        Opacity="0"
+                        Clicked="GoHome_Clicked"/>
+            </Grid>
+
+
+            <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+
+                <Label Text="Enter the solving word"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+
+                <Entry x:Name="wordEntryBox"
+                   Placeholder="                                   "
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center" />
+
+                <Button x:Name="switchToPlayerOne"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center" 
+                    Text="Done"
+                    Clicked="SwitchToPlayerOne_Clicked"/>
+
+            </StackLayout>
+        </StackLayout>
+        
+
+
+
+    </ContentPage.Content>
+</ContentPage>

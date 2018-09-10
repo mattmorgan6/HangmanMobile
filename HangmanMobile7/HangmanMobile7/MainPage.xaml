@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HangmanMobile7"
+             x:Class="HangmanMobile7.MainPage"
+             BackgroundImage="bi1.jpg">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+    	<Label Text="Hangman Mobile" 
+               Margin="0, 32, 0, 0"
+               FontSize="26"
+               TextColor="WhiteSmoke"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start" />
+
+        <Button x:Name="singlePlayerButton"
+                Text="Single Player"
+                Margin="0, 72, 0, 0"
+                HeightRequest="38"
+                WidthRequest="132"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                BackgroundColor="#0892D0"
+                TextColor="WhiteSmoke"
+                Clicked="SinglePlayerButton_Clicked"/>
+
+        <Button x:Name="TwoPlayerButton"
+                Text="Two Player"
+                Margin="0, 16, 0, 0"
+                HeightRequest="38"
+                WidthRequest="132"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                BackgroundColor="#D0082E" 
+                TextColor="WhiteSmoke"
+                Clicked="TwoPlayerButton_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
