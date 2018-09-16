@@ -174,7 +174,7 @@ namespace HangmanMobile7
         }
 
 
-        private void CheckIfSolved()                                        // (7)  checks if you won!
+        async void CheckIfSolved()                                        // (7)  checks if you won!
         {
             string current = "";
             for (int i = 0; i < letters.Count; i++)
@@ -184,7 +184,7 @@ namespace HangmanMobile7
 
             if (current.Equals(answer))
             {
-                //DisplayAlert("You Win", "Rate the app", "done");
+                await DisplayAlert("You Win", "Rate the app", "done");
                 BackToHome();
             }
         }
